@@ -1,0 +1,44 @@
+{
+  "name": "@pancakeswap-libs/pancake-profile-hook",
+  "version": "0.1.0",
+  "description": "React hook to fetch PCS profile data",
+  "license": "MIT",
+  "repository": "https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-profile-hook",
+  "keywords": [
+    "react",
+    "hook",
+    "react-hook",
+    "pancakeswap"
+  ],
+  "main": "dist/cjs/pancake-profile-hook.js",
+  "module": "dist/esm/pancake-profile-hook.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
+    "format:check": "prettier --check --loglevel error 'src/**/*.{js,jsx,ts,tsx}'",
+    "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "start": "rollup -c -w"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/demo/"
+    ]
+  },
+  "peerDependencies": {
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0"
+  },
+  "dependencies": {
+    "@pancakeswap-libs/profile-sdk": "file:../pancake-profile-sdk"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
