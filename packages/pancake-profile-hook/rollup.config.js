@@ -1,5 +1,6 @@
 import typescript from "@rollup/plugin-typescript";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import pkg from "./package.json";
 
 export default {
@@ -8,5 +9,6 @@ export default {
     { file: pkg.main, format: "cjs" },
     { file: pkg.module, format: "es" },
   ],
-  plugins: [nodeResolve(), typescript()],
+  plugins: [commonjs(), nodeResolve(), typescript()],
+  external: ["react", "react-dom", "web3", "web3-eth-contract", "web3-utils"],
 };
