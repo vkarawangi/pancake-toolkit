@@ -1,0 +1,3 @@
+[build]
+  base = "packages/token-lists/"
+  publish = "lists/"
