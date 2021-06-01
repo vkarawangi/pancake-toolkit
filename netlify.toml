@@ -1,6 +1,7 @@
 [build]
   base = "packages/token-lists/"
   publish = "lists/"
+  command = ""
 
 [[redirects]]
   from = "/"
